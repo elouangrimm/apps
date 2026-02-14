@@ -40,7 +40,7 @@
     "description": "A lightweight task manager built with vanilla JS. Simple, local-first, and fast.",
     "url": "https://tasks.e5g.dev",
     "github": "https://github.com/elouangrimm/tasks",
-    "cover": "",
+    "cover": "assets/tasks.png",
     "tags": ["productivity", "tool", "minimal", "new"],
     "index": 3
   },
