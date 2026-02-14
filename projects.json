@@ -2,7 +2,7 @@
   {
     "name": "cnvrt",
     "description": "A minimal, on-device file converter. No uploads, no servers — everything runs in your browser.",
-    "url": "https://cnvrt.elouan.xyz",
+    "url": "https://cnvrt.e5g.dev",
     "github": "https://github.com/elouangrimm/cnvrt",
     "cover": "",
     "tags": ["tool", "privacy", "featured", "update soon"],
@@ -29,7 +29,7 @@
   {
     "name": "pfpgen",
     "description": "A quick profile picture generator for creating my personal avatars on the fly.",
-    "url": "https://github.com/elouangrimm/pfpgen",
+    "url": "https://pfpgen.e5g.dev",
     "github": "https://github.com/elouangrimm/pfpgen",
     "cover": "",
     "tags": ["tool", "generator", "images", "new"],
@@ -38,7 +38,7 @@
   {
     "name": "tasks",
     "description": "A lightweight task manager built with vanilla JS. Simple, local-first, and fast.",
-    "url": "https://github.com/elouangrimm/tasks",
+    "url": "https://tasks.e5g.dev",
     "github": "https://github.com/elouangrimm/tasks",
     "cover": "",
     "tags": ["productivity", "tool", "minimal", "new"],
@@ -48,7 +48,7 @@
     "name": "SaneGames",
     "description": "A better client for all CrazyGames games, with no ads or annoying UI.",
     "url": "https://sanegames.elouan.xyz/",
-    "github": "",
+    "github": "https://github.com/elouangrimm/sanegames",
     "cover": "assets/sanegames.png",
     "tags": ["games", "tool", "update soon"],
     "index": 4
@@ -57,9 +57,9 @@
     "name": "movies.elouan.xyz",
     "description": "A very simple website to watch any movies or shows, for free!",
     "url": "https://movies.elouan.xyz/",
-    "github": "",
+    "github": "https://github.com/elouangrimm/movies",
     "cover": "assets/movies.png",
-    "tags": ["app", "movies", "piracy"],
+    "tags": ["movies", "piracy"],
     "index": 5
   },
   {
@@ -69,15 +69,42 @@
     "github": "https://github.com/EpimetheusGames/ProjectPrometheus",
     "cover": "assets/projectprometheus.png",
     "tags": ["game"],
-    "index": 7
+    "index": 9
   },
   {
     "name": "CodePond",
     "description": "A simple code-to-image app that works with the pondiverse.",
     "url": "https://codepond.elouan.xyz/",
-    "github": "",
+    "github": "https://github.com/elouangrimm/codepond",
     "cover": "assets/codepond.png",
     "tags": ["tool", "generator", "images"],
-    "index": 8
+    "index": 8 
+  },
+  {
+    "name": "Zapp",
+    "description": "Remove annoying elements from any webpage.",
+    "url": "https://github.com/elouangrimm/zapp",
+    "github": "https://github.com/elouangrimm/zapp",
+    "cover": "",
+    "tags": ["extension", "fork", "update soon"],
+    "index": 7
+  },
+  {
+    "name": "elouan.xyz",
+    "description": "Just a simple plain HTML/CSS/JS portfolio site, with a little blog (but I don't post often).",
+    "url": "https://elouan.xyz",
+    "github": "https://github.com/elouangrimm/elouan.xyz",
+    "cover": "",
+    "tags": ["website", "blog"],
+    "index": 11
+  },
+  {
+    "name": "Clocktab",
+    "description": "A simple, minimal clock and timer app.",
+    "url": "https://clocktab.elouan.xyz",
+    "github": "https://github.com/elouangrimm/clocktab",
+    "cover": "",
+    "tags": ["tool"],
+    "index": 10
   }
 ]

@@ -168,7 +168,7 @@
           <h3 class="card-title">
             <a href="${escapeHTML(project.url)}" target="_blank" rel="noopener">${escapeHTML(project.name)}</a>
           </h3>
-          <a href="${escapeHTML(project.github)}" class="card-github" title="View source on GitHub" target="_blank" rel="noopener" aria-label="GitHub repository for ${escapeHTML(project.name)}">${GITHUB_ICON}</a>
+          ${project.github ? `<a href="${escapeHTML(project.github)}" class="card-github" title="View source on GitHub" target="_blank" rel="noopener" aria-label="GitHub repository for ${escapeHTML(project.name)}">${GITHUB_ICON}</a>` : ""}
         </div>
         <p class="card-desc">${escapeHTML(project.description)}</p>
         <div class="card-tags">${tagsHTML}</div>
