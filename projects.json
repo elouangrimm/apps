@@ -4,7 +4,7 @@
     "description": "A minimal, on-device file converter. No uploads, no servers — everything runs in your browser.",
     "url": "https://cnvrt.e5g.dev",
     "github": "https://github.com/elouangrimm/cnvrt",
-    "cover": "",
+    "cover": "assets/cnvrt.png",
     "tags": ["tool", "privacy", "featured", "update soon"],
     "index": 0
   },
@@ -22,7 +22,7 @@
     "description": "Blank new tab with a custom solid background color and optional pinned Home tab.",
     "url": "https://chromewebstore.google.com/detail/minimal-new-tab/afnmoecpnepccekbinlapeolhgdgjclm",
     "github": "https://github.com/elouangrimm/MinimalNewTab",
-    "cover": "",
+    "cover": "assets/minimalnewtab.png",
     "tags": ["extension", "productivity", "minimal"],
     "index": 1
   },
@@ -94,7 +94,7 @@
     "description": "Just a simple plain HTML/CSS/JS portfolio site, with a little blog (but I don't post often).",
     "url": "https://elouan.xyz",
     "github": "https://github.com/elouangrimm/elouan.xyz",
-    "cover": "",
+    "cover": "assets/elouan.xyz.png",
     "tags": ["website", "blog"],
     "index": 11
   },
