@@ -120,19 +120,19 @@ strong {
 /* === 5. LINKS === */
 
 a {
-  color: var(--accent);
+  --color: var(--accent);
+  color: var(--color);
   text-decoration: none;
-  transition: background-color 0.15s, color 0.15s, outline-color 0.15s;
 }
 
 a:hover {
-  background-color: var(--accent);
+  background-color: var(--color);
   color: var(--bg);
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--color);
 }
 
 a:focus {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--color);
   text-decoration: none;
 }
 
@@ -235,7 +235,7 @@ input::placeholder {
 .logo:hover {
   background: none;
   outline: none;
-  color: var(--accent);
+  color: var(--text-bright);
 }
 
 .logo .accent {
@@ -243,7 +243,7 @@ input::placeholder {
 }
 
 .logo:hover .accent {
-  color: var(--bg);
+  color: var(--accent);
 }
 
 .header-nav {
@@ -260,9 +260,9 @@ input::placeholder {
 }
 
 .icon-link:hover {
-  color: var(--bg);
-  background-color: var(--accent);
-  outline: 2px solid var(--accent);
+  color: var(--text-bright);
+  background: none;
+  outline: none;
 }
 
 .icon-link svg {
@@ -401,13 +401,14 @@ input::placeholder {
 }
 
 .card-title a {
+  --color: var(--accent);
   color: var(--text-bright);
 }
 
 .card-title a:hover {
   color: var(--bg);
-  background-color: var(--accent);
-  outline: 2px solid var(--accent);
+  background-color: var(--color);
+  outline: 2px solid var(--color);
 }
 
 .card-github {
@@ -419,9 +420,9 @@ input::placeholder {
 }
 
 .card-github:hover {
-  color: var(--bg);
-  background-color: var(--accent);
-  outline: 2px solid var(--accent);
+  color: var(--text-bright);
+  background: none;
+  outline: none;
 }
 
 .card-github svg {
@@ -457,6 +458,11 @@ input::placeholder {
   z-index: 1;
 }
 
+.card-link-overlay:hover {
+  background: none;
+  outline: none;
+}
+
 .card-header {
   position: relative;
   z-index: 2;
@@ -488,17 +494,25 @@ input::placeholder {
 .footer-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 12px;
 }
 
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.footer-sep {
+  color: var(--text-faint);
+  user-select: none;
 }
 
-.footer-links a {
+.footer-inner a {
   font-size: 0.9rem;
+}
+
+.footer-inner .icon-link {
+  color: var(--text-muted);
+}
+
+.footer-inner .icon-link:hover {
+  color: var(--text-bright);
 }
 
 /* === 17. CARD ENTER ANIMATION === */
@@ -554,9 +568,7 @@ input::placeholder {
   }
 
   .footer-inner {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+    gap: 10px;
   }
 }
 
