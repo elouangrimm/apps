@@ -1,0 +1,570 @@
+/*
+  Apps Showcase — Elouan Grimm
+  Built on top of: https://e5g.dev/css
+  Design: dark-first, zero border-radius, flat, monospace headings
+*/
+
+/* === 1. DESIGN TOKENS (from base stylesheet) === */
+
+:root {
+  --stone-050: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+  --stone-950: #0c0a09;
+
+  --red: #ef4444;
+  --orange: #ff8046;
+  --amber: #f59e0b;
+  --yellow: #ffff46;
+  --lime: #84cc16;
+  --green: #22c55e;
+  --emerald: #10b981;
+  --teal: #14b8a6;
+  --cyan: #46ccff;
+  --sky: #0ea5e9;
+  --blue: #3b82f6;
+  --indigo: #6366f1;
+  --violet: #8b5cf6;
+  --purple: #8043ff;
+  --fuchsia: #d946ef;
+  --pink: #ff80de;
+  --rose: #f43f5e;
+  --coral: #ff8080;
+
+  --bg: var(--stone-950);
+  --bg-raised: var(--stone-900);
+  --bg-surface: var(--stone-800);
+  --border: var(--stone-800);
+  --border-strong: var(--stone-500);
+  --text: var(--stone-200);
+  --text-muted: var(--stone-400);
+  --text-faint: var(--stone-500);
+  --text-bright: var(--stone-100);
+  --accent: var(--blue);
+  --accent-hover: #5193f8;
+  --success: var(--green);
+  --danger: var(--red);
+  --warning: var(--amber);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", "Roboto Mono", "Cascadia Code", monospace;
+  --line-height: 1.6;
+  --line-height-tight: 1.2;
+}
+
+/* === 2. RESET === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+/* === 3. BASE === */
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: var(--line-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: var(--indigo);
+  color: var(--stone-050);
+}
+
+/* === 4. TYPOGRAPHY === */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  line-height: var(--line-height-tight);
+  color: var(--text-bright);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+p {
+  margin: 0.3em 0;
+}
+
+strong {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+/* === 5. LINKS === */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s, outline-color 0.15s;
+}
+
+a:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  outline: 2px solid var(--accent);
+}
+
+a:focus {
+  outline: 2px solid var(--accent);
+  text-decoration: none;
+}
+
+/* === 6. SCROLLBAR === */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+/* === 7. INPUTS === */
+
+input {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--bg);
+  border: 1px solid var(--border-strong);
+  color: var(--text-bright);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: var(--line-height);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input::placeholder {
+  color: var(--text-faint);
+  opacity: 0.6;
+}
+
+/* === 8. UTILITY === */
+
+.hidden {
+  display: none !important;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-faint {
+  color: var(--text-faint);
+}
+
+.text-bright {
+  color: var(--text-bright);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* === 9. LAYOUT === */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === 10. HEADER === */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.logo:hover {
+  background: none;
+  outline: none;
+  color: var(--accent);
+}
+
+.logo .accent {
+  color: var(--accent);
+}
+
+.logo:hover .accent {
+  color: var(--bg);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+  padding: 4px;
+}
+
+.icon-link:hover {
+  color: var(--bg);
+  background-color: var(--accent);
+  outline: 2px solid var(--accent);
+}
+
+.icon-link svg {
+  display: block;
+}
+
+/* === 11. HERO === */
+
+.hero {
+  padding: 48px 0 24px;
+}
+
+.hero h1 {
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+}
+
+/* === 12. FILTERS === */
+
+.filters {
+  padding: 0 0 32px;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.tag-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag-btn {
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  user-select: none;
+}
+
+.tag-btn:hover {
+  color: var(--text-bright);
+  border-color: var(--text-faint);
+}
+
+.tag-btn.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--stone-050);
+}
+
+.search-wrapper {
+  margin-left: auto;
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.search-wrapper input {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+}
+
+/* === 13. PROJECT GRID === */
+
+.projects {
+  flex: 1;
+  padding-bottom: 64px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* === 14. PROJECT CARD === */
+
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--text-faint);
+  transform: translateY(-2px);
+}
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.card-title a {
+  color: var(--text-bright);
+}
+
+.card-title a:hover {
+  color: var(--bg);
+  background-color: var(--accent);
+  outline: 2px solid var(--accent);
+}
+
+.card-github {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-faint);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.card-github:hover {
+  color: var(--bg);
+  background-color: var(--accent);
+  outline: 2px solid var(--accent);
+}
+
+.card-github svg {
+  display: block;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+}
+
+.card-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-header {
+  position: relative;
+  z-index: 2;
+}
+
+.card-tags {
+  position: relative;
+  z-index: 2;
+}
+
+/* === 15. NO RESULTS === */
+
+.no-results {
+  text-align: center;
+  padding: 48px 0;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+/* === 16. FOOTER === */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+}
+
+/* === 17. CARD ENTER ANIMATION === */
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: cardIn 0.3s ease both;
+}
+
+/* stagger cards */
+.card:nth-child(1) { animation-delay: 0s; }
+.card:nth-child(2) { animation-delay: 0.05s; }
+.card:nth-child(3) { animation-delay: 0.1s; }
+.card:nth-child(4) { animation-delay: 0.15s; }
+.card:nth-child(5) { animation-delay: 0.2s; }
+.card:nth-child(6) { animation-delay: 0.25s; }
+.card:nth-child(7) { animation-delay: 0.3s; }
+.card:nth-child(8) { animation-delay: 0.35s; }
+
+/* === 18. RESPONSIVE === */
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 0 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.6em;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* === 19. PROJECT COUNT === */
+
+.project-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  padding: 0 0 16px;
+}

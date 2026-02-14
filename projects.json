@@ -1,0 +1,34 @@
+[
+  {
+    "name": "cnvrt",
+    "description": "A minimal, on-device file converter. No uploads, no servers — everything runs in your browser.",
+    "url": "https://cnvrt.elouan.xyz",
+    "github": "https://github.com/elouangrimm/cnvrt",
+    "cover": "",
+    "tags": ["tool", "converter", "privacy"]
+  },
+  {
+    "name": "MinimalNewTab",
+    "description": "An extremely minimal New Tab Page browser extension. Clean, fast, distraction-free.",
+    "url": "https://github.com/elouangrimm/MinimalNewTab",
+    "github": "https://github.com/elouangrimm/MinimalNewTab",
+    "cover": "",
+    "tags": ["extension", "productivity", "minimal"]
+  },
+  {
+    "name": "pfpgen",
+    "description": "A quick profile picture generator for creating simple, stylish avatars on the fly.",
+    "url": "https://github.com/elouangrimm/pfpgen",
+    "github": "https://github.com/elouangrimm/pfpgen",
+    "cover": "",
+    "tags": ["tool", "generator", "images"]
+  },
+  {
+    "name": "tasks",
+    "description": "A lightweight task manager built with vanilla JS. Simple, local-first, and fast.",
+    "url": "https://github.com/elouangrimm/tasks",
+    "github": "https://github.com/elouangrimm/tasks",
+    "cover": "",
+    "tags": ["productivity", "tool", "minimal"]
+  }
+]
