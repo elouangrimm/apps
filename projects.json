@@ -9,6 +9,14 @@
     "index": 0
   },
   {
+    "name": "YouBlock lite",
+    "description": "An efficient content blocker. Blocks ads, trackers, miners, and more immediately upon installation.",
+    "url": "https://chromewebstore.google.com/detail/youblock-lite/looigibllgojbefbpalaagkkcenlompd",
+    "github": "https://github.com/elouangrimm/youblock",
+    "cover": "assets/youblock.png",
+    "tags": ["extension", "privacy", "fork"]
+  },
+  {
     "name": "MinimalNewTab",
     "description": "An extremely minimal New Tab Page browser extension. Clean, fast, distraction-free.",
     "url": "https://github.com/elouangrimm/MinimalNewTab",
