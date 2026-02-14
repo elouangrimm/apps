@@ -5,7 +5,7 @@
     "url": "https://cnvrt.elouan.xyz",
     "github": "https://github.com/elouangrimm/cnvrt",
     "cover": "",
-    "tags": ["tool", "converter", "privacy", "featured", "update soon"],
+    "tags": ["tool", "privacy", "featured", "update soon"],
     "index": 0
   },
   {
@@ -14,12 +14,13 @@
     "url": "https://chromewebstore.google.com/detail/youblock-lite/looigibllgojbefbpalaagkkcenlompd",
     "github": "https://github.com/elouangrimm/youblock",
     "cover": "assets/youblock.png",
-    "tags": ["extension", "privacy", "fork"]
+    "tags": ["extension", "privacy", "fork"],
+    "index": 6
   },
   {
     "name": "MinimalNewTab",
-    "description": "An extremely minimal New Tab Page browser extension. Clean, fast, distraction-free.",
-    "url": "https://github.com/elouangrimm/MinimalNewTab",
+    "description": "Blank new tab with a custom solid background color and optional pinned Home tab.",
+    "url": "https://chromewebstore.google.com/detail/minimal-new-tab/afnmoecpnepccekbinlapeolhgdgjclm",
     "github": "https://github.com/elouangrimm/MinimalNewTab",
     "cover": "",
     "tags": ["extension", "productivity", "minimal"],
@@ -49,26 +50,17 @@
     "url": "https://sanegames.elouan.xyz/",
     "github": "",
     "cover": "assets/sanegames.png",
-    "tags": ["games", "tools", "wrapper", "patches", "JS", "update soon"],
+    "tags": ["games", "tool", "update soon"],
     "index": 4
   },
   {
     "name": "movies.elouan.xyz",
-    "description": "A very simple website to watch any movies or shows, for free! (just a redirector, don't worry)",
+    "description": "A very simple website to watch any movies or shows, for free!",
     "url": "https://movies.elouan.xyz/",
     "github": "",
     "cover": "assets/movies.png",
-    "tags": ["app", "movies", "HTML", "JS", "piracy"],
+    "tags": ["app", "movies", "piracy"],
     "index": 5
-  },
-  {
-    "name": "Minimal New Tab",
-    "description": "Blank new tab with a custom solid background color and optional pinned Home tab.",
-    "url": "https://chromewebstore.google.com/detail/minimal-new-tab/afnmoecpnepccekbinlapeolhgdgjclm",
-    "github": "",
-    "cover": "assets/minimalnewtab.png",
-    "tags": ["extension", "HTML", "JS"],
-    "index": 6
   },
   {
     "name": "Project Prometheus",
@@ -76,7 +68,7 @@
     "url": "https://github.com/EpimetheusGames/ProjectPrometheus",
     "github": "https://github.com/EpimetheusGames/ProjectPrometheus",
     "cover": "assets/projectprometheus.png",
-    "tags": ["game", "godot", "itch.io"],
+    "tags": ["game"],
     "index": 7
   },
   {
