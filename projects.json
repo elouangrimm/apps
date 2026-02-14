@@ -33,7 +33,7 @@
     "github": "https://github.com/elouangrimm/pfpgen",
     "cover": "",
     "tags": ["tool", "generator", "images", "new"],
-    "index": 2
+    "index": 7
   },
   {
     "name": "tasks",
@@ -64,7 +64,7 @@
   },
   {
     "name": "Project Prometheus",
-    "description": "Explore a long-abandoned facility, originally the international government energy project known as Project Prometheus. I worked on this game with Epimetheus Games.",
+    "description": "Explore a long-abandoned facility, originally the international government energy project known as Project Prometheus. I created this game with Epimetheus Games, for the OGPC.",
     "url": "https://github.com/EpimetheusGames/ProjectPrometheus",
     "github": "https://github.com/EpimetheusGames/ProjectPrometheus",
     "cover": "assets/projectprometheus.png",
@@ -73,7 +73,7 @@
   },
   {
     "name": "CodePond",
-    "description": "A simple code-to-image app that works with the pondiverse.",
+    "description": "A simple code-to-image renderer that works with the pondiverse.",
     "url": "https://codepond.elouan.xyz/",
     "github": "https://github.com/elouangrimm/codepond",
     "cover": "assets/codepond.png",
@@ -82,12 +82,12 @@
   },
   {
     "name": "Zapp",
-    "description": "Remove annoying elements from any webpage.",
+    "description": "Remove annoying elements from any webpage with a clean, minimal UI.",
     "url": "https://github.com/elouangrimm/zapp",
     "github": "https://github.com/elouangrimm/zapp",
     "cover": "",
     "tags": ["extension", "fork", "update soon"],
-    "index": 7
+    "index": 2
   },
   {
     "name": "elouan.xyz",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Clocktab",
-    "description": "A simple, minimal clock and timer app.",
+    "description": "A simple, minimal clock and timer app; in a material design style.",
     "url": "https://clocktab.elouan.xyz",
     "github": "https://github.com/elouangrimm/clocktab",
     "cover": "",
