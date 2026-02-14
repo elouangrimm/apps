@@ -5,7 +5,8 @@
     "url": "https://cnvrt.elouan.xyz",
     "github": "https://github.com/elouangrimm/cnvrt",
     "cover": "",
-    "tags": ["tool", "converter", "privacy"]
+    "tags": ["tool", "converter", "privacy", "featured", "update soon"],
+    "index": 0
   },
   {
     "name": "MinimalNewTab",
@@ -13,15 +14,17 @@
     "url": "https://github.com/elouangrimm/MinimalNewTab",
     "github": "https://github.com/elouangrimm/MinimalNewTab",
     "cover": "",
-    "tags": ["extension", "productivity", "minimal"]
+    "tags": ["extension", "productivity", "minimal"],
+    "index": 1
   },
   {
     "name": "pfpgen",
-    "description": "A quick profile picture generator for creating simple, stylish avatars on the fly.",
+    "description": "A quick profile picture generator for creating my personal avatars on the fly.",
     "url": "https://github.com/elouangrimm/pfpgen",
     "github": "https://github.com/elouangrimm/pfpgen",
     "cover": "",
-    "tags": ["tool", "generator", "images"]
+    "tags": ["tool", "generator", "images", "new"],
+    "index": 2
   },
   {
     "name": "tasks",
@@ -29,6 +32,52 @@
     "url": "https://github.com/elouangrimm/tasks",
     "github": "https://github.com/elouangrimm/tasks",
     "cover": "",
-    "tags": ["productivity", "tool", "minimal"]
+    "tags": ["productivity", "tool", "minimal", "new"],
+    "index": 3
+  },
+  {
+    "name": "SaneGames",
+    "description": "A better client for all CrazyGames games, with no ads or annoying UI.",
+    "url": "https://sanegames.elouan.xyz/",
+    "github": "",
+    "cover": "assets/sanegames.png",
+    "tags": ["games", "tools", "wrapper", "patches", "JS", "update soon"],
+    "index": 4
+  },
+  {
+    "name": "movies.elouan.xyz",
+    "description": "A very simple website to watch any movies or shows, for free! (just a redirector, don't worry)",
+    "url": "https://movies.elouan.xyz/",
+    "github": "",
+    "cover": "assets/movies.png",
+    "tags": ["app", "movies", "HTML", "JS", "piracy"],
+    "index": 5
+  },
+  {
+    "name": "Minimal New Tab",
+    "description": "Blank new tab with a custom solid background color and optional pinned Home tab.",
+    "url": "https://chromewebstore.google.com/detail/minimal-new-tab/afnmoecpnepccekbinlapeolhgdgjclm",
+    "github": "",
+    "cover": "assets/minimalnewtab.png",
+    "tags": ["extension", "HTML", "JS"],
+    "index": 6
+  },
+  {
+    "name": "Project Prometheus",
+    "description": "Explore a long-abandoned facility, originally the international government energy project known as Project Prometheus. I worked on this game with Epimetheus Games.",
+    "url": "https://github.com/EpimetheusGames/ProjectPrometheus",
+    "github": "https://github.com/EpimetheusGames/ProjectPrometheus",
+    "cover": "assets/projectprometheus.png",
+    "tags": ["game", "godot", "itch.io"],
+    "index": 7
+  },
+  {
+    "name": "CodePond",
+    "description": "A simple code-to-image app that works with the pondiverse.",
+    "url": "https://codepond.elouan.xyz/",
+    "github": "",
+    "cover": "assets/codepond.png",
+    "tags": ["tool", "generator", "images"],
+    "index": 8
   }
 ]

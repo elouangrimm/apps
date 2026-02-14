@@ -90,19 +90,22 @@
   function render() {
     const query = searchInput.value.trim().toLowerCase();
 
-    const filtered = allProjects.filter((p) => {
-      // Tag filter
-      if (activeTags.size > 0) {
-        const hasTag = p.tags.some((t) => activeTags.has(t));
-        if (!hasTag) return false;
-      }
-      // Search filter
-      if (query) {
-        const haystack = `${p.name} ${p.description} ${p.tags.join(" ")}`.toLowerCase();
-        if (!haystack.includes(query)) return false;
-      }
-      return true;
-    });
+    const filtered = allProjects
+      .slice()
+      .sort((a, b) => (a.index ?? Infinity) - (b.index ?? Infinity))
+      .filter((p) => {
+        // Tag filter
+        if (activeTags.size > 0) {
+          const hasTag = p.tags.some((t) => activeTags.has(t));
+          if (!hasTag) return false;
+        }
+        // Search filter
+        if (query) {
+          const haystack = `${p.name} ${p.description} ${p.tags.join(" ")}`.toLowerCase();
+          if (!haystack.includes(query)) return false;
+        }
+        return true;
+      });
 
     grid.innerHTML = "";
 
@@ -144,8 +147,17 @@
       coverHTML = `<img class="card-cover" src="${escapeHTML(project.cover)}" alt="${escapeHTML(project.name)} cover" loading="lazy">`;
     }
 
+    const SPECIAL_TAGS = {
+      "new": "tag-new",
+      "update soon": "tag-update-soon",
+      "featured": "tag-featured",
+    };
+
     const tagsHTML = project.tags
-      .map((t) => `<span class="tag">${escapeHTML(t)}</span>`)
+      .map((t) => {
+        const special = SPECIAL_TAGS[t.toLowerCase()] || "";
+        return `<span class="tag ${special}">${escapeHTML(t)}</span>`;
+      })
       .join("");
 
     card.innerHTML = `

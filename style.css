@@ -452,6 +452,24 @@ input::placeholder {
   color: var(--text-faint);
 }
 
+.tag-new {
+  background: color-mix(in srgb, var(--fuchsia) 15%, transparent);
+  border-color: var(--fuchsia);
+  color: var(--fuchsia);
+}
+
+.tag-update-soon {
+  background: color-mix(in srgb, var(--amber) 15%, transparent);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.tag-featured {
+  background: color-mix(in srgb, var(--green) 15%, transparent);
+  border-color: var(--green);
+  color: var(--green);
+}
+
 .card-link-overlay {
   position: absolute;
   inset: 0;
