@@ -486,7 +486,6 @@ input::placeholder {
 /* === 16. FOOTER === */
 
 .site-footer {
-  border-top: 1px solid var(--border);
   padding: 20px 0;
   margin-top: auto;
 }
