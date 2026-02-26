@@ -10,7 +10,7 @@
   },
   {
     "name": "YouBlock lite",
-    "description": "An efficient content blocker. Blocks ads, trackers, miners, and more immediately upon installation.",
+    "description": "An efficient content blocker: Blocks ads, trackers, miners, and more immediately upon installation. A Material Design fork of uBlock Origin Lite.",
     "url": "https://chromewebstore.google.com/detail/youblock-lite/looigibllgojbefbpalaagkkcenlompd",
     "github": "https://github.com/elouangrimm/youblock",
     "cover": "assets/youblock.png",
@@ -24,7 +24,7 @@
     "github": "https://github.com/elouangrimm/MinimalNewTab",
     "cover": "assets/minimalnewtab.png",
     "tags": ["extension", "productivity", "minimal"],
-    "index": 1
+    "index": 5
   },
   {
     "name": "pfpgen",
@@ -60,7 +60,7 @@
     "github": "https://github.com/elouangrimm/movies",
     "cover": "assets/movies.png",
     "tags": ["movies", "not piracy", "updated"],
-    "index": 5
+    "index": 1
   },
   {
     "name": "Project Prometheus",
