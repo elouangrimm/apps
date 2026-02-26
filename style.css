@@ -464,6 +464,12 @@ input::placeholder {
   color: var(--amber);
 }
 
+.tag-updated {
+  background: color-mix(in srgb, var(--blue) 15%, transparent);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
 .tag-featured {
   background: color-mix(in srgb, var(--green) 15%, transparent);
   border-color: var(--green);

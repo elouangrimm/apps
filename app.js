@@ -150,6 +150,7 @@
     const SPECIAL_TAGS = {
       "new": "tag-new",
       "update soon": "tag-update-soon",
+      "updated": "tag-updated",
       "featured": "tag-featured",
     };
 

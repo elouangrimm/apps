@@ -41,7 +41,7 @@
     "url": "https://tasks.e5g.dev",
     "github": "https://github.com/elouangrimm/tasks",
     "cover": "assets/tasks.png",
-    "tags": ["productivity", "tool", "minimal", "new"],
+    "tags": ["productivity", "tool", "minimal", "new", "updated"],
     "index": 2
   },
   {
@@ -59,7 +59,7 @@
     "url": "https://movies.elouan.xyz/",
     "github": "https://github.com/elouangrimm/movies",
     "cover": "assets/movies.png",
-    "tags": ["movies", "not piracy"],
+    "tags": ["movies", "not piracy", "updated"],
     "index": 5
   },
   {
