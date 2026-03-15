@@ -20,7 +20,7 @@
   {
     "name": "MinimalNewTab",
     "description": "Blank new tab with a custom solid background color and optional pinned Home tab.",
-    "url": "https://chromewebstore.google.com/detail/minimal-new-tab/afnmoecpnepccekbinlapeolhgdgjclm",
+    "url": "https://chromewebstore.google.com/detail/minimal-new-tab/fmnangpmhapcdjpnfjanckicmmhodgka",
     "github": "https://github.com/elouangrimm/MinimalNewTab",
     "cover": "assets/minimalnewtab.png",
     "tags": ["extension", "productivity", "minimal"],
