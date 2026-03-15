@@ -32,7 +32,7 @@
     "url": "https://pfpgen.e5g.dev",
     "github": "https://github.com/elouangrimm/pfpgen",
     "cover": "",
-    "tags": ["tool", "generator", "images", "new"],
+    "tags": ["tool", "generator", "images"],
     "index": 12
   },
   {
@@ -109,10 +109,10 @@
   },
   {
     "name": "srv-it",
-    "description": "Static server cli with polished CLI UI, directory listing, and live reload",
+    "description": "Static server cli with polished CLI UI, directory listing, and live reload.",
     "url": "https://www.npmjs.com/package/srv-it",
     "github": "https://github.com/elouangrimm/srv-it",
-    "cover": "",
+    "cover": "assets/srv-it.png",
     "tags": ["tool", "new", "featured"],
     "index": 7
   }

@@ -10,6 +10,8 @@
 
   let allProjects = [];
   let activeTags = new Set();
+  let masonryFrame = 0;
+  let resizeTimer = 0;
 
   const grid = document.getElementById("project-grid");
   const tagContainer = document.getElementById("tag-filters");
@@ -32,6 +34,7 @@
     render();
 
     searchInput.addEventListener("input", render);
+    window.addEventListener("resize", onResize);
   }
 
   // --- Tag Filters ---
@@ -111,13 +114,21 @@
 
     if (filtered.length === 0) {
       noResults.classList.remove("hidden");
+      grid.style.height = "0px";
     } else {
       noResults.classList.add("hidden");
     }
 
     filtered.forEach((project, i) => {
-      grid.appendChild(createCard(project, i));
+      const card = createCard(project, i);
+      const cover = card.querySelector(".card-cover");
+      if (cover) {
+        cover.addEventListener("load", scheduleMasonry, { once: true });
+      }
+      grid.appendChild(card);
     });
+
+    scheduleMasonry();
 
     // Update project count
     let countEl = document.getElementById("project-count");
@@ -177,6 +188,55 @@
     `;
 
     return card;
+  }
+
+  function onResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(scheduleMasonry, 80);
+  }
+
+  function scheduleMasonry() {
+    if (masonryFrame) {
+      cancelAnimationFrame(masonryFrame);
+    }
+    masonryFrame = requestAnimationFrame(applyMasonryLayout);
+  }
+
+  function applyMasonryLayout() {
+    const cards = Array.from(grid.querySelectorAll(".card"));
+    if (cards.length === 0) {
+      grid.style.height = "0px";
+      return;
+    }
+
+    const minCardWidth = 280;
+    const gap = 20;
+    const gridWidth = grid.clientWidth;
+    const columnCount = Math.max(1, Math.floor((gridWidth + gap) / (minCardWidth + gap)));
+    const cardWidth = (gridWidth - (columnCount - 1) * gap) / columnCount;
+    const columnHeights = new Array(columnCount).fill(0);
+
+    cards.forEach((card) => {
+      card.style.width = `${cardWidth}px`;
+
+      // Pack cards tightly while iterating in original source order.
+      let targetColumn = 0;
+      for (let i = 1; i < columnCount; i += 1) {
+        if (columnHeights[i] < columnHeights[targetColumn]) {
+          targetColumn = i;
+        }
+      }
+
+      const x = targetColumn * (cardWidth + gap);
+      const y = columnHeights[targetColumn];
+
+      card.style.left = `${x}px`;
+      card.style.top = `${y}px`;
+
+      columnHeights[targetColumn] += card.offsetHeight + gap;
+    });
+
+    grid.style.height = `${Math.max(...columnHeights) - gap}px`;
   }
 
   // --- Helpers ---
