@@ -115,5 +115,14 @@
     "cover": "assets/srv-it.png",
     "tags": ["tool", "new", "featured"],
     "index": 7
+  },
+  {
+    "name": "ascmii",
+    "description": "Identify and search every ASCII character.",
+    "url": "https://ascmii.e5g.dev",
+    "github": "https://github.com/elouangrimm/ascmii",
+    "cover": "assets/ascmii.png",
+    "tags": ["tool", "new"],
+    "index": 13
   }
 ]
